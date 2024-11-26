@@ -1,0 +1,12 @@
+model Post {
+  id         String     @id @default(cuid())
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+  title      String
+  author     User       @relation(fields: [authorId], references: [id])
+  authorId   String
+  categories Category[]
+  published  Boolean    @default(false)
+
+  @@map("posts")
+}

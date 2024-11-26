@@ -1,0 +1,7 @@
+model Category {
+  id    String @id @default(cuid())
+  name  String
+  posts Post[]
+
+  @@map("categories")
+}

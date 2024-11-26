@@ -1,0 +1,8 @@
+model Profile {
+  id     String @id @default(cuid())
+  bio    String
+  user   User   @relation(fields: [id], references: [id])
+  userId String @unique
+
+  @@map("profiles")
+}
