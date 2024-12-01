@@ -4,7 +4,7 @@ import { UpdateProfileDto } from './dto/update-profile.dto';
 import { PrismaService } from 'nestjs-prisma';
 
 @Injectable()
-export class ProfileService {
+export class ProfilesService {
   constructor(private readonly prismaService: PrismaService) {}
 
   create(dto: CreateProfileDto) {

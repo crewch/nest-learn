@@ -7,15 +7,15 @@ import {
   Param,
   Delete,
 } from '@nestjs/common';
-import { ProfileService } from './profile.service';
+import { ProfilesService } from './profiles.service';
 import { CreateProfileDto } from './dto/create-profile.dto';
 import { UpdateProfileDto } from './dto/update-profile.dto';
 import { ApiCreatedResponse, ApiOkResponse } from '@nestjs/swagger';
 import { ProfileEntity } from './entities/profile.entity';
 
-@Controller('profile')
-export class ProfileController {
-  constructor(private readonly profileService: ProfileService) {}
+@Controller('profiles')
+export class ProfilesController {
+  constructor(private readonly profileService: ProfilesService) {}
 
   @Post()
   @ApiCreatedResponse({ type: ProfileEntity })

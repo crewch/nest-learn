@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { UsersModule } from './users/users.module';
 import { CategoriesModule } from './categories/categories.module';
-import { ProfileModule } from './profile/profile.module';
+import { ProfilesModule } from './profiles/profiles.module';
 import { PostsModule } from './posts/posts.module';
 
 @Module({
@@ -10,7 +10,7 @@ import { PostsModule } from './posts/posts.module';
     ConfigModule.forRoot(),
     UsersModule,
     CategoriesModule,
-    ProfileModule,
+    ProfilesModule,
     PostsModule,
   ],
   controllers: [],
